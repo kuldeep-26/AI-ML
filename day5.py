@@ -42,7 +42,7 @@
 
 # 5. Membership operators
 
-#stud = ['kalika','ritu','jugnu','raman','kanha']
+stud = ['kalika','ritu','jugnu','raman','kanha','ritu']
 # IN.....
 #if 'ritu' in stud:
 #    print('present.')
@@ -53,3 +53,12 @@
 #    print('outsider.')
 #else:
 #    print('welcome')     
+
+dt = {}
+count = 1
+for i in stud:
+    if i in dt:
+        dt[i] += 1
+    else:
+        dt[i] = 1
+print(dt)
