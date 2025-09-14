@@ -15,7 +15,7 @@ def prediction():
     if request.method == "POST":
         mail = request.form.get('mail','')
         mail = mail.lower()
-        mail = re.sub(r'[^a-zA-z ]', '', mail)
+        mail = re.sub(r'[^a-zA-Z ]', '', mail)
 
         mail_transformed = converter.transform([mail])
         prediction = model.predict(mail_transformed)[0]
